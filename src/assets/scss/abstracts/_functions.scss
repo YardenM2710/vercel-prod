@@ -1,0 +1,7 @@
+@use './variables' as *;
+
+// REM Functions
+@function rem($size) {
+  $remSize: calc($size / 16px);
+  @return ($remSize) * 1rem;
+}

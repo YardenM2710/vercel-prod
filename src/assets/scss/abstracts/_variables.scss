@@ -1,0 +1,32 @@
+$main_font_size: 14px;
+
+$font-size-xxx-small: calc(8px / $main_font_size) * 1rem;
+$font-size-xx-small: calc(10px / $main_font_size) * 1rem;
+$font-size-x-small: calc(12px / $main_font_size) * 1rem;
+$font-size-small: calc(14px / $main_font_size) * 1rem;
+$font-size-normal: calc(16px / $main_font_size) * 1rem;
+$font-size-medium-1: calc(18px / $main_font_size) * 1rem;
+$font-size-medium-2: calc(20px / $main_font_size) * 1rem;
+$font-size-large-1: calc(24px / $main_font_size) * 1rem;
+$font-size-large-2: calc(28px / $main_font_size) * 1rem;
+$font-size-x-large-1: calc(32px / $main_font_size) * 1rem;
+$font-size-x-large-2: calc(34px / $main_font_size) * 1rem;
+$font-size-x-large-3: calc(40px / $main_font_size) * 1rem;
+
+$vh-full: calc(var(--vh, 1vh) * 100);
+$vh: calc($vh-full - env(safe-area-inset-top, 20px) - env(safe-area-inset-bottom, 10px));
+
+// Breakpoints
+$mobile-breakpoint: 600px;
+$narrow-breakpoint: 800px;
+$normal-breakpoint: 980px;
+$wide-breakpoint: 1260px;
+
+// SHADOW
+$card-shadow: 0px 1px 10px 1px #0000000d;
+$button-shadow: 0px 1px 3px 1px #00000026;
+
+// Header height
+$header-height: 97px;
+$header-height-mobile: 72px;
+$header-margin-bottom: 35px;

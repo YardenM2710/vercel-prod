@@ -1,0 +1,70 @@
+@use '../abstracts/colors.module' as *;
+
+.navbar {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  padding: 0;
+  z-index: 100;
+  background: #222;
+}
+
+.nav-item {
+  flex: 1;
+  background: #222;
+  // transform: skewX(355deg);
+  color: $dark-yellow;
+  font-size: 0.8rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 0.75rem 0;
+  border: none;
+  outline: none;
+  transition: all 0.2s ease;
+  // height: 90px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-right: 1px solid $dark-yellow;
+  svg {
+    fill: $dark-yellow;
+  }
+  gap: 10px;
+  &.active {
+    background: $dark-yellow;
+    position: relative;
+    // position: absolute;
+    color: white;
+    z-index: 200;
+    text-shadow: 2px 2px 1px black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+    transform: translateY(-10px);
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    box-shadow: 0 -2px 3px rgba(0, 0, 0, 0.3);
+    svg {
+      fill: white;
+    }
+  }
+}
+
+.nav-spacer {
+  // position: absolute;
+  // bottom: 0;
+  width: 80px;
+  // transform: skewX(355deg);
+  flex: 1;
+  z-index: 200;
+  transition: all 0.2s ease;
+  // transform: skewX(355deg);
+
+  height: 90px; // Match the height of nav items
+  // background: $dark-yellow; // Match the navbar background
+  &.active {
+    background: $dark-yellow;
+    // transform: skewX(350deg);
+  }
+}
