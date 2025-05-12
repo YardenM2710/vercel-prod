@@ -3,7 +3,7 @@ name: Deploy to Vercel
 on:
   push:
     branches:
-      - main # or your default branch name
+      - main
 
 jobs:
   deploy:
@@ -26,7 +26,10 @@ jobs:
       - name: Deploy to Vercel
         run: |
           npm install -g vercel
-          vercel --prod --token=$VERCEL_TOKEN --yes --scope $VERCEL_ORG_ID --project $VERCEL_PROJECT_ID
+          vercel --prod --yes \
+                 --token=$VERCEL_TOKEN \
+                 --scope=$VERCEL_ORG_ID \
+                 --project=$VERCEL_PROJECT_ID
         env:
           VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
           VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
